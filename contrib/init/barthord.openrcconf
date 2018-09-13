@@ -1,0 +1,26 @@
+# /etc/conf.d/barthord: config file for /etc/init.d/barthord
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/barthor/barthor.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/barthord"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/barthord.pid"
+
+# Where to write barthord data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/barthord"
+
+# User and group to own barthord process
+#BITCOIND_USER="barthor"
+#BITCOIND_GROUP="barthor"
+
+# Path to barthord executable
+#BITCOIND_BIN="/usr/bin/barthord"
+
+# Nice value to run barthord under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

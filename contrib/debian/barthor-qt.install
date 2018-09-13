@@ -1,0 +1,6 @@
+usr/local/bin/barthor-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin16.xpm usr/share/pixmaps
+share/pixmaps/bitcoin128.png usr/share/pixmaps
+debian/barthor-qt.desktop usr/share/applications
+debian/barthor-qt.protocol usr/share/kde4/services/

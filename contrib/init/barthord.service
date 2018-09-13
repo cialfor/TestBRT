@@ -1,0 +1,26 @@
+[Unit]
+Description=Barthor's distributed currency daemon
+After=network.target
+
+[Service]
+User=barthor
+Group=barthor
+
+Type=forking
+PIDFile=/var/lib/barthord/barthord.pid
+
+ExecStart=/usr/bin/barthord -daemon -pid=/var/lib/barthord/barthord.pid \
+          -conf=/etc/barthor/barthor.conf -datadir=/var/lib/barthord
+
+ExecStop=-/usr/bin/barthor-cli -conf=/etc/barthor/barthor.conf \
+         -datadir=/var/lib/barthord stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
